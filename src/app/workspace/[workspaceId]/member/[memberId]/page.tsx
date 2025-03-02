@@ -10,7 +10,7 @@ import { toast } from "sonner";
 import Conversation from "./conversation";
 
 
-const memberIdPage = () => {
+const MemberIdPage = () => {
   const workspaceId = UseWorkspaceId();
   const memberId = UsememberId();
   const [conversationId, setConversationId] = useState<Id<"conversations"> | null>(null)
@@ -53,4 +53,4 @@ const memberIdPage = () => {
   )
 }
 
-export default memberIdPage
+export default MemberIdPage

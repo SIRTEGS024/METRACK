@@ -6,7 +6,7 @@ interface RendererProps {
   value: string
 }
 
-const renderer = ({ value }: RendererProps) => {
+const Renderer = ({ value }: RendererProps) => {
   const [isEmpty, setIsEmpty] = useState(false);
   const rendererRef = useRef<HTMLDivElement>(null);
 
@@ -36,4 +36,4 @@ const renderer = ({ value }: RendererProps) => {
   )
 }
 
-export default renderer
+export default Renderer;

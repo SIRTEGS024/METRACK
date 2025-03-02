@@ -10,11 +10,14 @@ import Hint from "./hint";
 import { cn } from "@/lib/utils";
 import EmojiPopover from "./emoji-popover";
 import Image from "next/image";
-import { Emoji } from "@emoji-mart/data";
 
 type EditorValue = {
   image: File | null;
   body: string;
+};
+
+type EmojiType = {
+  native: string;
 };
 
 interface EditorProps {
@@ -129,7 +132,7 @@ const Editor = ({
     };
   }, [innerRef]);
 
-  const onEmojiSelect = (emoji: Emoji) => {
+  const onEmojiSelect = (emoji:EmojiType) => {
     const quill = quillRef.current;
     quill?.insertText(quill?.getSelection()?.index || 0, emoji.native)
   }

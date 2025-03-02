@@ -24,7 +24,7 @@ export const UseGenerateUploadUrl = () => {
 
   const mutation = useMutation(api.upload.generateUploadUrl);
   const mutate = useCallback(
-    async (_values: {}, options?: Options) => {
+    async (_values: Record<string, unknown>, options?: Options) => {
       try {
         setData(null);
         setError(null);
